@@ -19,7 +19,7 @@ void atenderAccion() {
   // obtenemos el comando
   String comando=webServer.arg("comando");
   // lo enviamos al escornabot como si fuéramos un dispositivo Bluetooth + APP
-  Serial.print(comando[0]);
+  Serial.print(comando);
   Serial.print('\n');
   // enviamos el comando de vuelta al cliente web
   webServer.send(200, "text/plain", comando);
